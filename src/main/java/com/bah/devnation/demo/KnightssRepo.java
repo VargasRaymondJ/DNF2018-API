@@ -1,4 +1,4 @@
-package com.bah.devnation.demo.devnation;
+package com.bah.devnation.demo;
 
 
 import org.springframework.data.repository.CrudRepository;

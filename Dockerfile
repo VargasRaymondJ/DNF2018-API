@@ -1,7 +1,7 @@
 FROM maven:3.5-jdk-8 as BUILD_IMAGE
 WORKDIR /api
 COPY . /api
-RUN mvn clean package
+RUN mvn clean package -Dmaven.test.skip=true
 EXPOSE 8080
 RUN cd target
 RUN ls

@@ -1,12 +1,12 @@
-package com.bah.devnation.demo.devnation;
-import javax.persistence.Id;
+package com.bah.devnation.demo;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="caps", schema="public")
-public class Caps {
+@Table(name="vgk", schema="public")
+public class Knights {
 
     @Id
     private String no;
@@ -22,6 +22,25 @@ public class Caps {
     private String summary;
     private String salary;
     private String draft;
+
+    public Knights(String no, String player, String flag, String pos, String age, String height, String weight, String sc, String exp, String birthdate, String summary, String salary, String draft) {
+        this.no = no;
+        this.player = player;
+        this.flag = flag;
+        this.pos = pos;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+        this.sc = sc;
+        this.exp = exp;
+        this.birthdate = birthdate;
+        this.summary = summary;
+        this.salary = salary;
+        this.draft = draft;
+    }
+
+    public Knights() {
+    }
 
     public String getNo() {
         return no;

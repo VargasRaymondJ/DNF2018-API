@@ -1,21 +1,28 @@
-package com.bah.devnation.demo.devnation;
+package com.bah.devnation.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin
-@RequestMapping(value = "/knights")
-public class KnightsController {
+public class PlayersController {
 
     @Autowired
-    private KnightssRepo repo;
+    private CapsRepo repoCaps;
+    @Autowired
+    private KnightssRepo repoKnights;
 
-    @GetMapping
+
+    @GetMapping(value = "/caps")
+    public Iterable<Caps> getAllCaps(){
+        return repoCaps.findAll();
+    }
+
+
+    @GetMapping(value = "/knights")
     public Iterable<Knights> getAllKnights(){
-        return repo.findAll();
+        return repoKnights.findAll();
     }
 }

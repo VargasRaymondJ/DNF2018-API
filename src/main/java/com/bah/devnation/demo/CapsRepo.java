@@ -1,7 +1,6 @@
-package com.bah.devnation.demo.devnation;
+package com.bah.devnation.demo;
 
 
-import com.bah.devnation.demo.devnation.Caps;
 import org.springframework.data.repository.CrudRepository;
 
 public interface CapsRepo extends CrudRepository<Caps, Integer> {

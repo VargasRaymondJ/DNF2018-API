@@ -11,7 +11,7 @@ spring:
     generate-ddl: false
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/
-    username: postgres
-    password: b00zall3n
+    url: jdbc:postgresql://postgres/devnation
+    username: ${POSTGRESQL_USER}
+    password: ${POSTGRESQL_PASSWORD}
     initialization-mode: always
